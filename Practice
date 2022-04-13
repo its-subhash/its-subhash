@@ -1,0 +1,52 @@
+#Practicing Basic Things
+
+print("\nwelcome in Self Dictonary")
+
+info={}
+info["name"] = {}
+info["name"]["first"] = input("\n Please Enter your First Name : ")
+info["name"]["middle"] = input("\n Please Enter your Middle Name : ")
+info["name"]["last"] = input("\n Please Enter your Surname Name : ")
+
+print("\nHey", info["name"]["first"], "!!!", '''\n Now You can save any of your data here,
+Just Enter your following details below and Create Your Password''')
+while True:
+    info["age"] = input("\n Please Enter Your Age Here : ")
+    try:
+        if int(info["age"]) < 18:
+            print("\n You Can't Create Acoount.")
+            break
+        elif int(info["age"]) >= 18:
+            print("\nYou Can Proceed...!")
+            break
+    except Exception:
+        print("\nYou Done Something Wrong, PLease Try Again")
+        continue
+while True:
+    info["phone"] = input("\n Enter Your Phone Number : ")
+    try:
+        if len(info["phone"]) < 10 or len(info["phone"]) > 10:
+            print("\n Given Number is Incorrect, Check Again. ")
+            continue
+        elif len(info["phone"]) == 10:
+            break
+    except Exception :
+        print("\n Given Number is Incorrect, Check Again. ")
+        continue
+info["email"] = input("\nEnter Your Email Address : ")
+print('\n Password Should Contain Atleast 8 Charecters')
+while True:
+    Password = input("\n Your Password : ")
+    if len(Password) < 8:
+        print("\nInsufficient Charecters, Try Again.")
+        continue
+    else:
+        break
+while True:
+    Password1 = input("\n Re-Enter Your Password : ")
+    if Password == Password1:
+        print("\n Regestration Completed")
+        break
+    else:
+        print("\n Password didn't Matched, Try Again.")
+        continue
